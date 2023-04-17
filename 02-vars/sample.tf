@@ -70,3 +70,11 @@ variable "state"  {
 output "state_name_op" {
     value = "Name of the state is ${var.state}"
 }
+
+# This variable value will be supplied from the command line
+
+variable "Country" {} 
+
+output "country_name" {
+    value = "Name of the country is ${var.Country}"
+}
