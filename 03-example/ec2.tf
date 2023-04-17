@@ -16,7 +16,7 @@ output "private_dns_of_server" {
 
 # Creatting a security group instamce
 resource "aws_security_group" "allow_ssh_sg" {
-  name        = "b53_allow_ssh_sg"
+  name        = "b5_allow_ssh_sg"
   description = "Allow SSH inbound traffic"
 
   ingress {
@@ -37,6 +37,6 @@ resource "aws_security_group" "allow_ssh_sg" {
   }
 
   tags = {
-    Name = "b53_allow_ssh_sg"
+    Name = "b5_allow_ssh_sg"
   }
 }
