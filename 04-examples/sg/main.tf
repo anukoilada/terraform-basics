@@ -1,4 +1,4 @@
- Creates Security Group 
+ # Creates Security Group 
 resource "aws_security_group" "allow_ssh_sg" {
   name        = "b53_allow_ssh_sg"
   description = "Allow SSH inbound traffic"
