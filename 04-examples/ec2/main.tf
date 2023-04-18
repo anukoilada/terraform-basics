@@ -9,6 +9,21 @@ resource "aws_instance" "web" {
   }
 }
 
+# Declaring the remote provisioner inside the resource
+  provisioner "remote-exec" {
+
+      connection {                   // establishes connectivity to the created machine
+        type     = "ssh"
+        user     = "centos"
+        password = "DevOps321"
+        host     = self.private_ip   
+      }
+
+    inline = [
+        "ansible-pull -U https://github.com/anukoilada/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb"
+    ]
+  }
+
 variable "sg" {}
 
 output "private_dns" {
