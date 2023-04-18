@@ -23,7 +23,7 @@ provisioner "remote-exec" {
         "ansible-pull -U https://github.com/anukoilada/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb"
     ]
   }
-}
+
 
 variable "sg" {}
 
