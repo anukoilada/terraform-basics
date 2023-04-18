@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   }
 
 # Declaring the remote provisioner inside the resource
-provisioner "remote-exec" {
+  provisioner "remote-exec" {
 
       connection {                   // establishes connectivity to the created machine
         type     = "ssh"
