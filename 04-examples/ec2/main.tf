@@ -7,6 +7,8 @@ resource "aws_instance" "web" {
   tags = {
     Name        = "Terraform-Instance-Server-Name"
   }
+}
+
 
 variable "sg" {}
 
