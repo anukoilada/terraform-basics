@@ -15,7 +15,7 @@ resource "aws_instance" "web" {
         type     = "ssh"
         user     = "centos"
         password = "DevOps321"
-        host     = self.private_ip   
+        host     =  self.private_ip   
       }
 
     inline = [
@@ -25,6 +25,7 @@ resource "aws_instance" "web" {
 }
 
 variable "sg" {}
+
 output "private_dns" {
     value = aws_instance.web.private_dns
 }
