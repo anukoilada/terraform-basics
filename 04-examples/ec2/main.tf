@@ -7,7 +7,6 @@ resource "aws_instance" "web" {
   tags = {
     Name        = "Terraform-Instance-Server-Name"
   }
-
 # Declaring the remote provisioner inside the resource
   provisioner "remote-exec" {
 
