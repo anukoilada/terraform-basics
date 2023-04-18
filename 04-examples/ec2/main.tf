@@ -14,7 +14,7 @@ resource "aws_instance" "web" {
         type     = "ssh"
         user     = "centos"
         password = "DevOps321"
-        host     =  self.private_ip   
+        host     =  self.private_dns
       }
 
     inline = [
