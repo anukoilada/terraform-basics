@@ -19,7 +19,7 @@ provisioner "remote-exec" {
       }
 
     inline = [
-        "ansible-pull -U https://github.com/anukoilada/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb"
+        "ansible-pull -U https://github.com/b53-clouddevops/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb"
     ]
   }
 }
